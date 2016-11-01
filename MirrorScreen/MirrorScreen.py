@@ -18,10 +18,10 @@ class WeatherModule():
 
     def __init__(self):
          #Initialises all of the Variables to use in this class
-        self.img_clear = tkinter.PhotoImage(file="mirrorscreen_images\clear.png")
-        self.img_cloudy = tkinter.PhotoImage(file="mirrorscreen_images\cloudy.png")
-        self.img_mainly_cloudy = tkinter.PhotoImage(file="mirrorscreen_images\mainly_cloudy.png")
-        self.img_partialy_cloudy = tkinter.PhotoImage(file="mirrorscreen_images\partialy_cloudy.png")
+        self.img_clear = tkinter.PhotoImage(file="./mirrorscreen_images/clear.png")
+        self.img_cloudy = tkinter.PhotoImage(file="./mirrorscreen_images/cloudy.png")
+        self.img_mainly_cloudy = tkinter.PhotoImage(file="./mirrorscreen_images/mainly_cloudy.png")
+        self.img_partialy_cloudy = tkinter.PhotoImage(file="./mirrorscreen_images/partialy_cloudy.png")
         self.list_weekdays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
 
     def Weather_Token(self,clouds,label):
@@ -212,14 +212,10 @@ class CalenadarModule():
 
         self.label_date.config(text=("Today :" + self.now.strftime('%d/%m/%y')))
         
-
-        #width,height = 4,2
-
-        #array_date =[[0 for x in range(width)] for y in range(height)]
         text = ""
+        self.label_event.config(text=text)
         for i in range(0,4):
-            #array_date[0][i] =(self.now + datetime.timedelta(days=i)).strftime('%Y-%m-%d')
-
+            
             date = (self.now + datetime.timedelta(days=i)).strftime('%Y-%m-%d')
 
             if i == 0:
@@ -235,7 +231,7 @@ class CalenadarModule():
             print("Date :" + date + "- Day : " + day)
 
             total_itterated = self.AddGoogle(google_events ,date,day,text)
-            #del google_events[0:total_itterated]
+        del text 
 
         self.frame_Calendar.after(100000,self.logic)
 
