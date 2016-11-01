@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectTarget>
+    <TargetProject>472f027b-f77c-4b0a-9264-909a5a7bc89e</TargetProject>
+    <FriendlyName>MirrorScreen</FriendlyName>
+  </ProjectTarget>
+  <Reports>
+    <Report>
+      <Filename>C:\Users\James\AppData\Local\Temp\MirrorScreen_20160903.vsp</Filename>
+    </Report>
+  </Reports>
+</ProfilingTarget>
